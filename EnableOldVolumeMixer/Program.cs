@@ -42,6 +42,8 @@ namespace EnableOldVolumeMixer
 
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
+
+            regEditor.Dispose();
         }
     }
 }

@@ -59,15 +59,15 @@ namespace EnableOldVolumeMixer
 
         private void TryDisable()
         {
-            if (regEditor.KeyExists())
-            {
-                regEditor.DeleteKey();
-                Console.WriteLine("Old mixer successfully disabled");
-            }
-            else
+            if (!regEditor.KeyExists())
             {
                 Console.WriteLine("Old mixer already disabled");
                 return;
+            }
+            else
+            {
+                regEditor.DeleteKey();
+                Console.WriteLine("Old mixer successfully disabled");
             }
             
         }
