@@ -12,10 +12,9 @@ namespace EnableOldVolumeMixer
         {
             string command;
 
-            Constants constants = new Constants();
             RegistryEditor regEditor = new RegistryEditor(
-                constants.GetMixerRegistryPath(), 
-                constants.GetMixerSubKey()
+                Constants.MixerRegistryPath, 
+                Constants.MixerSubKey
                 );
             CommandParser parser = new CommandParser(regEditor);
 

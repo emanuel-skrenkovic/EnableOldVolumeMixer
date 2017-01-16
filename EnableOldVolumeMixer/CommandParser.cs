@@ -41,14 +41,13 @@ namespace EnableOldVolumeMixer
             if (regEditor.KeyExists())
             {
                 Console.WriteLine("Old mixer already enabled");
-                return;
             }
             else
             {
                 DWord dWord = new DWord
                 {
-                    Name = "EnableMtcUvc",
-                    Value = 0,
+                    Name = Constants.MixerDwordName,
+                    Value = Constants.MixerDwordValue,
                 };
 
                 regEditor.CreateKey();
@@ -62,7 +61,6 @@ namespace EnableOldVolumeMixer
             if (!regEditor.KeyExists())
             {
                 Console.WriteLine("Old mixer already disabled");
-                return;
             }
             else
             {

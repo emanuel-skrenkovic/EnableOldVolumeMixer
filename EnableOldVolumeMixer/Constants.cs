@@ -6,20 +6,12 @@ using System.Threading.Tasks;
 
 namespace EnableOldVolumeMixer
 {
-    class Constants
+    public static class Constants
     {
         public static readonly string MixerRegistryPath = @"SOFTWARE\Microsoft\Windows NT\CurrentVersion";
         public static readonly string MixerSubKey = "MTCUVC";
-
-        public string GetMixerRegistryPath()
-        {
-            return MixerRegistryPath;
-        }
-
-        public string GetMixerSubKey()
-        {
-            return MixerSubKey;
-        }
+        public static readonly string MixerDwordName = "EnableMtcUvc";
+        public static readonly UInt32 MixerDwordValue = 0;
     }
 }
     
