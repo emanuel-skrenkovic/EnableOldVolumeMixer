@@ -41,10 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandParser.cs" />
+    <Compile Include="CommandHandler.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="DWord.cs" />
-    <Compile Include="RegistryValue.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegistryEditor.cs" />

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,13 +11,20 @@ namespace EnableOldVolumeMixer
     {
         static void Main(string[] args)
         {
+            if(!IsElevated())
+            {
+                Console.WriteLine("This program needs to be run as administrator");
+                Console.ReadKey();
+                Environment.Exit(0);
+            }
+
             string command;
 
             RegistryEditor regEditor = new RegistryEditor(
                 Constants.MixerRegistryPath, 
                 Constants.MixerSubKey
                 );
-            CommandParser parser = new CommandParser(regEditor);
+            CommandHandler commandHandler = new CommandHandler(regEditor);
 
             Console.WriteLine("This program makes changes to the Windows registry. " + "\n" +
             "Use at your own risk." + "\n" +
@@ -37,12 +45,19 @@ namespace EnableOldVolumeMixer
                     break;
                 }
             }
-            parser.TakeCommands(command);
+            commandHandler.TakeCommands(command);
 
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
 
             regEditor.Dispose();
+        }
+
+        private static bool IsElevated()
+        {
+            return new WindowsPrincipal(
+                WindowsIdentity.GetCurrent())
+                .IsInRole(WindowsBuiltInRole.Administrator);
         }
     }
 }

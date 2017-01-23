@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace EnableOldVolumeMixer
 {
-    class CommandParser
+    class CommandHandler
     { 
         private RegistryEditor regEditor;
 
-        public CommandParser(RegistryEditor regEditor)
+        public CommandHandler(RegistryEditor regEditor)
         {
             this.regEditor = regEditor;
         }
@@ -22,10 +22,10 @@ namespace EnableOldVolumeMixer
             switch (command)
             {  
                 case "1":
-                    TryEnable();
+                    Enable();
                     break;
                 case "2":
-                    TryDisable();
+                    Disable();
                     break;
                 case "3":
                     Environment.Exit(0);
@@ -36,7 +36,7 @@ namespace EnableOldVolumeMixer
             } 
         }
 
-        private void TryEnable()
+        private void Enable()
         {
             if (regEditor.KeyExists())
             {
@@ -56,7 +56,7 @@ namespace EnableOldVolumeMixer
             }
         }
 
-        private void TryDisable()
+        private void Disable()
         {
             if (!regEditor.KeyExists())
             {

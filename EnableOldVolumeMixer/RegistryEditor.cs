@@ -25,7 +25,7 @@ namespace EnableOldVolumeMixer
 
         public bool KeyExists()
         {
-            return ((key.OpenSubKey(subKey, true) != null));
+            return (key.OpenSubKey(subKey, true) != null);
         }
 
         public void CreateKey()
