@@ -26,10 +26,6 @@ namespace EnableOldVolumeMixer
                 );
             CommandHandler commandHandler = new CommandHandler(regEditor);
 
-            Console.WriteLine("This program makes changes to the Windows registry. " + "\n" +
-            "Use at your own risk." + "\n" +
-            "\n");
-
             Console.WriteLine("Enter line number for command you wish to execute: " + "\n" +
                 "1) Enable old volume mixer" + "\n" +
                 "2) Disable old volume mixer" + "\n" +
