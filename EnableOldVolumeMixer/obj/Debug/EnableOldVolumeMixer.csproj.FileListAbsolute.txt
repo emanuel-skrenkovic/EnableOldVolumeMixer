@@ -1,6 +1,0 @@
-D:\dev\EnableOldVolumeMixer\EnableOldVolumeMixer\bin\Debug\EnableOldVolumeMixer.exe.config
-D:\dev\EnableOldVolumeMixer\EnableOldVolumeMixer\bin\Debug\EnableOldVolumeMixer.exe
-D:\dev\EnableOldVolumeMixer\EnableOldVolumeMixer\bin\Debug\EnableOldVolumeMixer.pdb
-D:\dev\EnableOldVolumeMixer\EnableOldVolumeMixer\obj\Debug\EnableOldVolumeMixer.exe
-D:\dev\EnableOldVolumeMixer\EnableOldVolumeMixer\obj\Debug\EnableOldVolumeMixer.pdb
-D:\dev\EnableOldVolumeMixer\EnableOldVolumeMixer\obj\Debug\EnableOldVolumeMixer.csprojResolveAssemblyReference.cache
