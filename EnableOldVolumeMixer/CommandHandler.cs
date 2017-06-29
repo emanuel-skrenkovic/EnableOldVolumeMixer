@@ -40,7 +40,7 @@ namespace EnableOldVolumeMixer
         {
             if (regEditor.KeyExists())
             {
-                Console.WriteLine("Old mixer already enabled");
+                Console.WriteLine("Already enabled");
             }
             else
             {
@@ -52,7 +52,7 @@ namespace EnableOldVolumeMixer
 
                 regEditor.CreateKey();
                 regEditor.CreateDWordValue(dWord);
-                Console.WriteLine("Mixer successfully changed.");
+                Console.WriteLine("Successfully changed.");
             }
         }
 
@@ -60,12 +60,12 @@ namespace EnableOldVolumeMixer
         {
             if (!regEditor.KeyExists())
             {
-                Console.WriteLine("Old mixer already disabled");
+                Console.WriteLine("Already disabled");
             }
             else
             {
                 regEditor.DeleteKey();
-                Console.WriteLine("Old mixer successfully disabled");
+                Console.WriteLine("Successfully disabled");
             }
             
         }
